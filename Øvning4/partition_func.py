@@ -46,14 +46,14 @@ def partition_function_plot(m_AB, n):
     plt.legend(['ln Q_exact', 'ln Q_approx'], loc='upper left')
     plt.xlabel('Temperature')
     plt.ylabel('ln Q')
-    plt.savefig('./Øvning 4/plots/partition_function')
+    plt.savefig('./Øvning4/plots/partition_function')
     plt.close()
     plt.plot(temps, Q_ratio)
     plt.legend(['Q_ratio'], loc='upper left')
-    plt.savefig('./Øvning 4/plots/partition_function_ratio')
+    plt.savefig('./Øvning4/plots/partition_function_ratio')
     plt.close()
 
-with open('./Øvning 4/pickle_files/m_AB.pkl', 'rb') as f: #Opens microstate list
+with open('./Øvning4/pickle_files/m_AB.pkl', 'rb') as f: #Opens microstate list
     m_AB, n = pickle.load(f) #and creates variables m_AB (list) and N (system size)
 
 partition_function_plot(m_AB, n)
